@@ -1,0 +1,51 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="OutboundDeliveryLines" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="ArticleCode"                 xs:type="string"   readonly="true"              other:xPath="article/code"                />
+    <attr name="ArticleId"                   xs:type="integer"  readonly="true"              other:xPath="article/id"                  />
+    <attr name="ArticleIdentificationCode"   xs:type="string"   readonly="true"              other:xPath="article/identification_code" />
+    <attr name="ArticleModelNumber"          xs:type="string"   readonly="true"              other:xPath="article/model_number"        />
+    <attr name="ArticleName"                 xs:type="string"   readonly="true"              other:xPath="article/name"                />
+    <attr name="ArticleNameKana"             xs:type="string"   readonly="true"              other:xPath="article/name_kana"           />
+    <attr name="ArticleObjectCode"           xs:type="string"   readonly="true"              other:xPath="article/object_code"         />
+    <attr name="ArticleCode"                 xs:type="string"   readonly="true"              other:xPath="article_code"                />
+    <attr name="ArticleName"                 xs:type="string"   readonly="true"              other:xPath="article_name"                />
+    <attr name="CachedAllocatedQuantity"     xs:type="integer"  readonly="true"              other:xPath="cached_allocated_quantity"   />
+    <attr name="CreatedAt"                   xs:type="datetime" readonly="true"              other:xPath="created_at"                  />
+    <attr name="Id"                          xs:type="integer"  readonly="true"              other:xPath="id"                          />
+    <attr name="IsChild"                     xs:type="integer"  readonly="true"              other:xPath="is_child"                    />
+    <attr name="IsParent"                    xs:type="integer"  readonly="true"              other:xPath="is_parent"                   />
+    <attr name="IsPartialCancel"             xs:type="integer"  readonly="true"              other:xPath="is_partial_cancel"           />
+    <attr name="OriginCode"                  xs:type="string"   readonly="true"              other:xPath="origin/code"                 />
+    <attr name="OriginId"                    xs:type="integer"  readonly="true"              other:xPath="origin/id"                   />
+    <attr name="Price"                       xs:type="integer"  readonly="true"              other:xPath="price"                       />
+    <attr name="Quantity"                    xs:type="integer"  readonly="true"              other:xPath="quantity"                    />
+    <attr name="Status"                      xs:type="string"   readonly="true"              other:xPath="status"                      />
+    <attr name="Subtotal"                    xs:type="integer"  readonly="true"              other:xPath="subtotal"                    />
+    <attr name="TaxIndicator"                xs:type="string"   readonly="true"              other:xPath="tax_indicator"               />
+    <attr name="TaxRate"                     xs:type="integer"  readonly="true"              other:xPath="tax_rate"                    />
+    <attr name="TaxTotal"                    xs:type="integer"  readonly="true"              other:xPath="tax_total"                   />
+    <attr name="UpdatedAt"                   xs:type="datetime" readonly="true"              other:xPath="updated_at"                  />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="outbound_deliveries"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data.lines" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

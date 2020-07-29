@@ -1,0 +1,93 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="ActualInventorySummaries" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="ActualUnit"                      xs:type="string"   readonly="true"              other:xPath="actual_unit"                     />
+    <attr name="ArticleArticleType"              xs:type="string"   readonly="true"              other:xPath="article/article_type"            />
+    <attr name="ArticleAttr1"                    xs:type="string"   readonly="true"              other:xPath="article/attr1"                   />
+    <attr name="ArticleAttr10"                   xs:type="string"   readonly="true"              other:xPath="article/attr10"                  />
+    <attr name="ArticleAttr11"                   xs:type="string"   readonly="true"              other:xPath="article/attr11"                  />
+    <attr name="ArticleAttr12"                   xs:type="string"   readonly="true"              other:xPath="article/attr12"                  />
+    <attr name="ArticleAttr13"                   xs:type="string"   readonly="true"              other:xPath="article/attr13"                  />
+    <attr name="ArticleAttr14"                   xs:type="string"   readonly="true"              other:xPath="article/attr14"                  />
+    <attr name="ArticleAttr15"                   xs:type="string"   readonly="true"              other:xPath="article/attr15"                  />
+    <attr name="ArticleAttr16"                   xs:type="string"   readonly="true"              other:xPath="article/attr16"                  />
+    <attr name="ArticleAttr17"                   xs:type="string"   readonly="true"              other:xPath="article/attr17"                  />
+    <attr name="ArticleAttr18"                   xs:type="string"   readonly="true"              other:xPath="article/attr18"                  />
+    <attr name="ArticleAttr19"                   xs:type="string"   readonly="true"              other:xPath="article/attr19"                  />
+    <attr name="ArticleAttr2"                    xs:type="string"   readonly="true"              other:xPath="article/attr2"                   />
+    <attr name="ArticleAttr20"                   xs:type="string"   readonly="true"              other:xPath="article/attr20"                  />
+    <attr name="ArticleAttr3"                    xs:type="string"   readonly="true"              other:xPath="article/attr3"                   />
+    <attr name="ArticleAttr4"                    xs:type="string"   readonly="true"              other:xPath="article/attr4"                   />
+    <attr name="ArticleAttr5"                    xs:type="string"   readonly="true"              other:xPath="article/attr5"                   />
+    <attr name="ArticleAttr6"                    xs:type="string"   readonly="true"              other:xPath="article/attr6"                   />
+    <attr name="ArticleAttr7"                    xs:type="string"   readonly="true"              other:xPath="article/attr7"                   />
+    <attr name="ArticleAttr8"                    xs:type="string"   readonly="true"              other:xPath="article/attr8"                   />
+    <attr name="ArticleAttr9"                    xs:type="string"   readonly="true"              other:xPath="article/attr9"                   />
+    <attr name="ArticleCode"                     xs:type="string"   readonly="true"              other:xPath="article/code"                    />
+    <attr name="ArticleComment"                  xs:type="string"   readonly="true"              other:xPath="article/comment"                 />
+    <attr name="ArticleContentsDescription"      xs:type="string"   readonly="true"              other:xPath="article/contents_description"    />
+    <attr name="ArticleCost"                     xs:type="integer"  readonly="true"              other:xPath="article/cost"                    />
+    <attr name="ArticleCreatedAt"                xs:type="datetime" readonly="true"              other:xPath="article/created_at"              />
+    <attr name="ArticleDefaultDeliveryMethod"    xs:type="string"   readonly="true"              other:xPath="article/default_delivery_method" />
+    <attr name="ArticleDepth"                    xs:type="integer"  readonly="true"              other:xPath="article/depth"                   />
+    <attr name="ArticleHeight"                   xs:type="integer"  readonly="true"              other:xPath="article/height"                  />
+    <attr name="ArticleId"                       xs:type="integer"  readonly="true"              other:xPath="article/id"                      />
+    <attr name="ArticleIdentificationCode"       xs:type="string"   readonly="true"              other:xPath="article/identification_code"     />
+    <attr name="ArticleLimitingSales"            xs:type="integer"  readonly="true"              other:xPath="article/limiting_sales"          />
+    <attr name="ArticleListPrice"                xs:type="integer"  readonly="true"              other:xPath="article/list_price"              />
+    <attr name="ArticleModelNumber"              xs:type="string"   readonly="true"              other:xPath="article/model_number"            />
+    <attr name="ArticleName"                     xs:type="string"   readonly="true"              other:xPath="article/name"                    />
+    <attr name="ArticleNameKana"                 xs:type="string"   readonly="true"              other:xPath="article/name_kana"               />
+    <attr name="ArticleObjectCode"               xs:type="string"   readonly="true"              other:xPath="article/object_code"             />
+    <attr name="ArticlePrice"                    xs:type="integer"  readonly="true"              other:xPath="article/price"                   />
+    <attr name="ArticleReorderPoint"             xs:type="integer"  readonly="true"              other:xPath="article/reorder_point"           />
+    <attr name="ArticleSizeCoefficient"          xs:type="integer"  readonly="true"              other:xPath="article/size_coefficient"        />
+    <attr name="ArticleTaxIndicator"             xs:type="string"   readonly="true"              other:xPath="article/tax_indicator"           />
+    <attr name="ArticleTaxRate"                  xs:type="integer"  readonly="true"              other:xPath="article/tax_rate"                />
+    <attr name="ArticleTemperatureControl"       xs:type="string"   readonly="true"              other:xPath="article/temperature_control"     />
+    <attr name="ArticleUnit"                     xs:type="string"   readonly="true"              other:xPath="article/unit"                    />
+    <attr name="ArticleUpdatedAt"                xs:type="datetime" readonly="true"              other:xPath="article/updated_at"              />
+    <attr name="ArticleWeight"                   xs:type="integer"  readonly="true"              other:xPath="article/weight"                  />
+    <attr name="ArticleWidth"                    xs:type="integer"  readonly="true"              other:xPath="article/width"                   />
+    <attr name="ArticleId"                       xs:type="integer"  readonly="true"              other:xPath="article_id"                      />
+    <attr name="Available"                       xs:type="integer"  readonly="true"              other:xPath="available"                       />
+    <attr name="Blocked"                         xs:type="integer"  readonly="true"              other:xPath="blocked"                         />
+    <attr name="CreatedAt"                       xs:type="datetime" readonly="true"              other:xPath="created_at"                      />
+    <attr name="Id"                              xs:type="integer"  readonly="true"              other:xPath="id"                              />
+    <attr name="Issued"                          xs:type="integer"  readonly="true"              other:xPath="issued"                          />
+    <attr name="Layer"                           xs:type="string"   readonly="true"              other:xPath="layer"                           />
+    <attr name="LocationCode"                    xs:type="string"   readonly="true"              other:xPath="location/code"                   />
+    <attr name="LocationId"                      xs:type="integer"  readonly="true"              other:xPath="location/id"                     />
+    <attr name="LocationName"                    xs:type="string"   readonly="true"              other:xPath="location/name"                   />
+    <attr name="LogicalUnit"                     xs:type="string"   readonly="true"              other:xPath="logical_unit"                    />
+    <attr name="LotNumber"                       xs:type="string"   readonly="true"              other:xPath="lot_number"                      />
+    <attr name="Multiplier"                      xs:type="integer"  readonly="true"              other:xPath="multiplier"                      />
+    <attr name="Received"                        xs:type="integer"  readonly="true"              other:xPath="received"                        />
+    <attr name="Shipped"                         xs:type="integer"  readonly="true"              other:xPath="shipped"                         />
+    <attr name="UpdatedAt"                       xs:type="datetime" readonly="true"              other:xPath="updated_at"                      />
+    <attr name="WarehouseId"                     xs:type="integer"  readonly="true"              other:xPath="warehouse/id"                    />
+    <attr name="WarehouseName"                   xs:type="date"     readonly="true"              other:xPath="warehouse/name"                  />
+    <attr name="WarehouseId"                     xs:type="integer"  readonly="true"              other:xPath="warehouse_id"                    />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="actual_inventory_summaries"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

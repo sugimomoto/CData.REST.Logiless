@@ -1,0 +1,32 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="Locations" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="Code"       xs:type="string"   readonly="true"              other:xPath="code"       />
+    <attr name="CreatedAt"  xs:type="date"     readonly="true"              other:xPath="created_at" />
+    <attr name="Id"         xs:type="integer"  readonly="true"              other:xPath="id"         />
+    <attr name="Name"       xs:type="date"     readonly="true"              other:xPath="name"       />
+    <attr name="UpdatedAt"  xs:type="datetime" readonly="true"              other:xPath="updated_at" />
+    <input name="WarehouseId" xs:type="string" />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="locations"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/warehouses/[_input.WarehouseId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

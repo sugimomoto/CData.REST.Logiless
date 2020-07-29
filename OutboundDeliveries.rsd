@@ -1,0 +1,68 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="OutboundDeliveries" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="AllocationStatus"             xs:type="string"   readonly="true"              other:xPath="allocation_status"            />
+    <attr name="CodTotal"                     xs:type="integer"  readonly="true"              other:xPath="cod_total"                    />
+    <attr name="Code"                         xs:type="string"   readonly="true"              other:xPath="code"                         />
+    <attr name="CreatedAt"                    xs:type="datetime" readonly="true"              other:xPath="created_at"                   />
+    <attr name="DeliveryMethod"               xs:type="string"   readonly="true"              other:xPath="delivery_method"              />
+    <attr name="DeliveryPackageQuantity"      xs:type="string"   readonly="true"              other:xPath="delivery_package_quantity"    />
+    <attr name="DeliveryStatus"               xs:type="string"   readonly="true"              other:xPath="delivery_status"              />
+    <attr name="DeliveryTemperatureControl"   xs:type="string"   readonly="true"              other:xPath="delivery_temperature_control" />
+    <attr name="DeliveryTrackingNumbers"      xs:type="string"   readonly="true"              other:xPath="delivery_tracking_numbers"    />
+    <attr name="DocumentDate"                 xs:type="date"     readonly="true"              other:xPath="document_date"                />
+    <attr name="DocumentStatus"               xs:type="string"   readonly="true"              other:xPath="document_status"              />
+    <attr name="FinishedAt"                   xs:type="datetime" readonly="true"              other:xPath="finished_at"                  />
+    <attr name="Gift"                         xs:type="boolean"  readonly="true"              other:xPath="gift"                         />
+    <attr name="Id"                           xs:type="integer"  readonly="true"              other:xPath="id"                           />
+    <attr name="Lines"                        xs:type="string"   readonly="true"              other:xPath="lines"                        />
+    <attr name="OrderedAt"                    xs:type="datetime" readonly="true"              other:xPath="ordered_at"                   />
+    <attr name="PostingDate"                  xs:type="date"     readonly="true"              other:xPath="posting_date"                 />
+    <attr name="RecipientAddress1"            xs:type="string"   readonly="true"              other:xPath="recipient_address1"           />
+    <attr name="RecipientAddress2"            xs:type="string"   readonly="true"              other:xPath="recipient_address2"           />
+    <attr name="RecipientAddress3"            xs:type="string"   readonly="true"              other:xPath="recipient_address3"           />
+    <attr name="RecipientCountry"             xs:type="string"   readonly="true"              other:xPath="recipient_country"            />
+    <attr name="RecipientName1"               xs:type="string"   readonly="true"              other:xPath="recipient_name1"              />
+    <attr name="RecipientName2"               xs:type="string"   readonly="true"              other:xPath="recipient_name2"              />
+    <attr name="RecipientPhone"               xs:type="string"   readonly="true"              other:xPath="recipient_phone"              />
+    <attr name="RecipientPostCode"            xs:type="string"   readonly="true"              other:xPath="recipient_post_code"          />
+    <attr name="RecipientPrefecture"          xs:type="string"   readonly="true"              other:xPath="recipient_prefecture"         />
+    <attr name="SalesOrderCode"               xs:type="string"   readonly="true"              other:xPath="sales_order/code"             />
+    <attr name="SalesOrderId"                 xs:type="integer"  readonly="true"              other:xPath="sales_order/id"               />
+    <attr name="ShipperAddress1"              xs:type="string"   readonly="true"              other:xPath="shipper_address1"             />
+    <attr name="ShipperAddress2"              xs:type="string"   readonly="true"              other:xPath="shipper_address2"             />
+    <attr name="ShipperAddress3"              xs:type="string"   readonly="true"              other:xPath="shipper_address3"             />
+    <attr name="ShipperCountry"               xs:type="string"   readonly="true"              other:xPath="shipper_country"              />
+    <attr name="ShipperName1"                 xs:type="string"   readonly="true"              other:xPath="shipper_name1"                />
+    <attr name="ShipperPhone"                 xs:type="string"   readonly="true"              other:xPath="shipper_phone"                />
+    <attr name="ShipperPostCode"              xs:type="string"   readonly="true"              other:xPath="shipper_post_code"            />
+    <attr name="ShipperPrefecture"            xs:type="string"   readonly="true"              other:xPath="shipper_prefecture"           />
+    <attr name="Store"                        xs:type="integer"  readonly="true"              other:xPath="store"                        />
+    <attr name="TotalQuantity"                xs:type="integer"  readonly="true"              other:xPath="total_quantity"               />
+    <attr name="TotalSizeCoefficient"         xs:type="integer"  readonly="true"              other:xPath="total_size_coefficient"       />
+    <attr name="TotalWeight"                  xs:type="integer"  readonly="true"              other:xPath="total_weight"                 />
+    <attr name="UpdatedAt"                    xs:type="datetime" readonly="true"              other:xPath="updated_at"                   />
+    <attr name="Warehouse"                    xs:type="integer"  readonly="true"              other:xPath="warehouse"                    />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="outbound_deliveries"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

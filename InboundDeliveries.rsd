@@ -1,0 +1,76 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="InboundDeliveries" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="Code"                         xs:type="string"   readonly="true"              other:xPath="code"                         />
+    <attr name="CreatedAt"                    xs:type="datetime" readonly="true"              other:xPath="created_at"                   />
+    <attr name="DeliveryTrackingNumbers"      xs:type="string"   readonly="true"              other:xPath="delivery_tracking_numbers"    />
+    <attr name="DocumentDate"                 xs:type="date"     readonly="true"              other:xPath="document_date"                />
+    <attr name="DocumentTaxRate"              xs:type="integer"  readonly="true"              other:xPath="document_tax_rate"            />
+    <attr name="FinishedAt"                   xs:type="datetime" readonly="true"              other:xPath="finished_at"                  />
+    <attr name="Id"                           xs:type="integer"  readonly="true"              other:xPath="id"                           />
+    <attr name="InboundDeliveryCategory"      xs:type="string"   readonly="true"              other:xPath="inbound_delivery_category"    />
+    <attr name="Lines"                        xs:type="string"   readonly="true"              other:xPath="lines"                        />
+    <attr name="OrderedAt"                    xs:type="datetime" readonly="true"              other:xPath="ordered_at"                   />
+    <attr name="PostingDate"                  xs:type="date"     readonly="true"              other:xPath="posting_date"                 />
+    <attr name="RecipientAddress1"            xs:type="string"   readonly="true"              other:xPath="recipient_address1"           />
+    <attr name="RecipientAddress2"            xs:type="string"   readonly="true"              other:xPath="recipient_address2"           />
+    <attr name="RecipientCountry"             xs:type="string"   readonly="true"              other:xPath="recipient_country"            />
+    <attr name="RecipientName"                xs:type="string"   readonly="true"              other:xPath="recipient_name"               />
+    <attr name="RecipientPostCode"            xs:type="string"   readonly="true"              other:xPath="recipient_post_code"          />
+    <attr name="RecipientPrefecture"          xs:type="string"   readonly="true"              other:xPath="recipient_prefecture"         />
+    <attr name="Status"                       xs:type="string"   readonly="true"              other:xPath="status"                       />
+    <attr name="Subtotal"                     xs:type="integer"  readonly="true"              other:xPath="subtotal"                     />
+    <attr name="SupplierAddress1"             xs:type="string"   readonly="true"              other:xPath="supplier/address1"            />
+    <attr name="SupplierAddress2"             xs:type="string"   readonly="true"              other:xPath="supplier/address2"            />
+    <attr name="SupplierAddress3"             xs:type="string"   readonly="true"              other:xPath="supplier/address3"            />
+    <attr name="SupplierCode"                 xs:type="string"   readonly="true"              other:xPath="supplier/code"                />
+    <attr name="SupplierCreatedAt"            xs:type="datetime" readonly="true"              other:xPath="supplier/created_at"          />
+    <attr name="SupplierEmail"                xs:type="string"   readonly="true"              other:xPath="supplier/email"               />
+    <attr name="SupplierId"                   xs:type="integer"  readonly="true"              other:xPath="supplier/id"                  />
+    <attr name="SupplierName"                 xs:type="string"   readonly="true"              other:xPath="supplier/name"                />
+    <attr name="SupplierNameKana"             xs:type="string"   readonly="true"              other:xPath="supplier/name_kana"           />
+    <attr name="SupplierPhone"                xs:type="string"   readonly="true"              other:xPath="supplier/phone"               />
+    <attr name="SupplierPostCode"             xs:type="string"   readonly="true"              other:xPath="supplier/post_code"           />
+    <attr name="SupplierPrefecture"           xs:type="string"   readonly="true"              other:xPath="supplier/prefecture"          />
+    <attr name="SupplierRepresentative"       xs:type="string"   readonly="true"              other:xPath="supplier/representative"      />
+    <attr name="SupplierRepresentativeKana"   xs:type="string"   readonly="true"              other:xPath="supplier/representative_kana" />
+    <attr name="SupplierUpdatedAt"            xs:type="datetime" readonly="true"              other:xPath="supplier/updated_at"          />
+    <attr name="SupplierAddress1"             xs:type="string"   readonly="true"              other:xPath="supplier_address1"            />
+    <attr name="SupplierAddress2"             xs:type="string"   readonly="true"              other:xPath="supplier_address2"            />
+    <attr name="SupplierAddress3"             xs:type="string"   readonly="true"              other:xPath="supplier_address3"            />
+    <attr name="SupplierCountry"              xs:type="string"   readonly="true"              other:xPath="supplier_country"             />
+    <attr name="SupplierEmail"                xs:type="string"   readonly="true"              other:xPath="supplier_email"               />
+    <attr name="SupplierName"                 xs:type="string"   readonly="true"              other:xPath="supplier_name"                />
+    <attr name="SupplierPhone"                xs:type="string"   readonly="true"              other:xPath="supplier_phone"               />
+    <attr name="SupplierPostCode"             xs:type="string"   readonly="true"              other:xPath="supplier_post_code"           />
+    <attr name="SupplierPrefecture"           xs:type="string"   readonly="true"              other:xPath="supplier_prefecture"          />
+    <attr name="TaxProcessingMethod"          xs:type="string"   readonly="true"              other:xPath="tax_processing_method"        />
+    <attr name="TaxRoundingMethod"            xs:type="string"   readonly="true"              other:xPath="tax_rounding_method"          />
+    <attr name="TaxTotal"                     xs:type="integer"  readonly="true"              other:xPath="tax_total"                    />
+    <attr name="Total"                        xs:type="integer"  readonly="true"              other:xPath="total"                        />
+    <attr name="UpdatedAt"                    xs:type="datetime" readonly="true"              other:xPath="updated_at"                   />
+    <attr name="WarehouseId"                  xs:type="integer"  readonly="true"              other:xPath="warehouse/id"                 />
+    <attr name="WarehouseName"                xs:type="date"     readonly="true"              other:xPath="warehouse/name"               />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="inbound_deliveries"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

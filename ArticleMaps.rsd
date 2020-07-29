@@ -1,0 +1,55 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="ArticleMaps" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="ArticleArticleType"                  xs:type="string"   readonly="true"              other:xPath="article/article_type"                />
+    <attr name="ArticleCode"                         xs:type="string"   readonly="true"              other:xPath="article/code"                        />
+    <attr name="ArticleCreatedAt"                    xs:type="datetime" readonly="true"              other:xPath="article/created_at"                  />
+    <attr name="ArticleId"                           xs:type="integer"  readonly="true"              other:xPath="article/id"                          />
+    <attr name="ArticleLimitingSales"                xs:type="integer"  readonly="true"              other:xPath="article/limiting_sales"              />
+    <attr name="ArticleName"                         xs:type="string"   readonly="true"              other:xPath="article/name"                        />
+    <attr name="ArticleObjectCode"                   xs:type="string"   readonly="true"              other:xPath="article/object_code"                 />
+    <attr name="ArticleTaxIndicator"                 xs:type="string"   readonly="true"              other:xPath="article/tax_indicator"               />
+    <attr name="ArticleTemperatureControl"           xs:type="string"   readonly="true"              other:xPath="article/temperature_control"         />
+    <attr name="ArticleUnit"                         xs:type="string"   readonly="true"              other:xPath="article/unit"                        />
+    <attr name="ArticleUpdatedAt"                    xs:type="datetime" readonly="true"              other:xPath="article/updated_at"                  />
+    <attr name="ArticleOption"                       xs:type="string"   readonly="true"              other:xPath="article_option"                      />
+    <attr name="Attr1"                               xs:type="string"   readonly="true"              other:xPath="attr1"                               />
+    <attr name="CachedStockQuantity"                 xs:type="integer"  readonly="true"              other:xPath="cached_stock_quantity"               />
+    <attr name="CreatedAt"                           xs:type="datetime" readonly="true"              other:xPath="created_at"                          />
+    <attr name="Id"                                  xs:type="integer"  readonly="true"              other:xPath="id"                                  />
+    <attr name="IsAutomaticInventorySyncEnables"     xs:type="boolean"  readonly="true"              other:xPath="is_automatic_inventory_sync_enables" />
+    <attr name="IsInventorySynced"                   xs:type="boolean"  readonly="true"              other:xPath="is_inventory_synced"                 />
+    <attr name="MappedChoice1"                       xs:type="string"   readonly="true"              other:xPath="mapped_choice1"                      />
+    <attr name="MappedChoice2"                       xs:type="string"   readonly="true"              other:xPath="mapped_choice2"                      />
+    <attr name="MappedChoice3"                       xs:type="string"   readonly="true"              other:xPath="mapped_choice3"                      />
+    <attr name="MappedCode"                          xs:type="string"   readonly="true"              other:xPath="mapped_code"                         />
+    <attr name="MaxStockQuantity"                    xs:type="integer"  readonly="true"              other:xPath="max_stock_quantity"                  />
+    <attr name="MinStockQuantity"                    xs:type="integer"  readonly="true"              other:xPath="min_stock_quantity"                  />
+    <attr name="StandbyStockQuantity"                xs:type="integer"  readonly="true"              other:xPath="standby_stock_quantity"              />
+    <attr name="StockAllocationRate"                 xs:type="integer"  readonly="true"              other:xPath="stock_allocation_rate"               />
+    <attr name="StoreId"                             xs:type="integer"  readonly="true"              other:xPath="store/id"                            />
+    <attr name="StoreName"                           xs:type="string"   readonly="true"              other:xPath="store/name"                          />
+    <attr name="UpdatedAt"                           xs:type="datetime" readonly="true"              other:xPath="updated_at"                          />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="article_maps"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>

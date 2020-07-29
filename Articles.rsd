@@ -1,0 +1,73 @@
+<api:script xmlns:api="http://apiscript.com/ns?v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- See Column Definitions to specify column behavior and use XPaths to extract column values from JSON. -->
+  <api:info title="Articles" desc="Generated schema file." xmlns:other="http://apiscript.com/ns?v1">
+    <!-- You can modify the name, type, and column size here. -->
+    <attr name="ArticleType"             xs:type="string"   readonly="true"              other:xPath="article_type"            />
+    <attr name="Attr1"                   xs:type="string"   readonly="true"              other:xPath="attr1"                   />
+    <attr name="Attr10"                  xs:type="string"   readonly="true"              other:xPath="attr10"                  />
+    <attr name="Attr11"                  xs:type="string"   readonly="true"              other:xPath="attr11"                  />
+    <attr name="Attr12"                  xs:type="string"   readonly="true"              other:xPath="attr12"                  />
+    <attr name="Attr13"                  xs:type="string"   readonly="true"              other:xPath="attr13"                  />
+    <attr name="Attr14"                  xs:type="string"   readonly="true"              other:xPath="attr14"                  />
+    <attr name="Attr15"                  xs:type="string"   readonly="true"              other:xPath="attr15"                  />
+    <attr name="Attr16"                  xs:type="string"   readonly="true"              other:xPath="attr16"                  />
+    <attr name="Attr17"                  xs:type="string"   readonly="true"              other:xPath="attr17"                  />
+    <attr name="Attr18"                  xs:type="string"   readonly="true"              other:xPath="attr18"                  />
+    <attr name="Attr19"                  xs:type="string"   readonly="true"              other:xPath="attr19"                  />
+    <attr name="Attr2"                   xs:type="string"   readonly="true"              other:xPath="attr2"                   />
+    <attr name="Attr20"                  xs:type="string"   readonly="true"              other:xPath="attr20"                  />
+    <attr name="Attr3"                   xs:type="string"   readonly="true"              other:xPath="attr3"                   />
+    <attr name="Attr4"                   xs:type="string"   readonly="true"              other:xPath="attr4"                   />
+    <attr name="Attr5"                   xs:type="string"   readonly="true"              other:xPath="attr5"                   />
+    <attr name="Attr6"                   xs:type="string"   readonly="true"              other:xPath="attr6"                   />
+    <attr name="Attr7"                   xs:type="string"   readonly="true"              other:xPath="attr7"                   />
+    <attr name="Attr8"                   xs:type="string"   readonly="true"              other:xPath="attr8"                   />
+    <attr name="Attr9"                   xs:type="string"   readonly="true"              other:xPath="attr9"                   />
+    <attr name="Code"                    xs:type="string"   readonly="true"              other:xPath="code"       other:filter="code:="             />
+    <attr name="Comment"                 xs:type="string"   readonly="true"              other:xPath="comment"                 />
+    <attr name="ContentsDescription"     xs:type="string"   readonly="true"              other:xPath="contents_description"    />
+    <attr name="Cost"                    xs:type="integer"  readonly="true"              other:xPath="cost"                    />
+    <attr name="CreatedAt"               xs:type="datetime" readonly="true"              other:xPath="created_at"              />
+    <attr name="DefaultDeliveryMethod"   xs:type="string"   readonly="true"              other:xPath="default_delivery_method" />
+    <attr name="Depth"                   xs:type="integer"  readonly="true"              other:xPath="depth"                   />
+    <attr name="Height"                  xs:type="integer"  readonly="true"              other:xPath="height"                  />
+    <attr name="Id"                      xs:type="integer"  readonly="true"              other:xPath="id"                      />
+    <attr name="IdentificationCode"      xs:type="string"   readonly="true"              other:xPath="identification_code"  other:filter="identification_code:="   />
+    <attr name="LimitingSales"           xs:type="integer"  readonly="true"              other:xPath="limiting_sales"          />
+    <attr name="ListPrice"               xs:type="integer"  readonly="true"              other:xPath="list_price"              />
+    <attr name="ModelNumber"             xs:type="string"   readonly="true"              other:xPath="model_number"     other:filter="model_number:="       />
+    <attr name="Name"                    xs:type="string"   readonly="true"              other:xPath="name"                    />
+    <attr name="NameKana"                xs:type="string"   readonly="true"              other:xPath="name_kana"               />
+    <attr name="ObjectCode"              xs:type="string"   readonly="true"              other:xPath="object_code"             />
+    <attr name="Price"                   xs:type="integer"  readonly="true"              other:xPath="price"                   />
+    <attr name="ReorderPoint"            xs:type="integer"  readonly="true"              other:xPath="reorder_point"           />
+    <attr name="SizeCoefficient"         xs:type="integer"  readonly="true"              other:xPath="size_coefficient"        />
+    <attr name="TaxIndicator"            xs:type="string"   readonly="true"              other:xPath="tax_indicator"           />
+    <attr name="TaxRate"                 xs:type="integer"  readonly="true"              other:xPath="tax_rate"                />
+    <attr name="TemperatureControl"      xs:type="string"   readonly="true"              other:xPath="temperature_control"     />
+    <attr name="Unit"                    xs:type="string"   readonly="true"              other:xPath="unit"                    />
+    <attr name="UpdatedAt"               xs:type="datetime" readonly="true"              other:xPath="updated_at"              />
+    <attr name="Weight"                  xs:type="integer"  readonly="true"              other:xPath="weight"                  />
+    <attr name="Width"                   xs:type="integer"  readonly="true"              other:xPath="width"                   />
+  </api:info>
+
+  <api:set attr="DataModel" value="DOCUMENT" />
+  <api:set attr="Resource" value="articles"/>
+  <api:set attr="PageNumberParam"                      value="page" />
+  <api:set attr="PageSizeParam"                        value="limit" />
+  <api:set attr="PageSize"                             value="100" />
+  <api:set attr="EnablePaging" value="TRUE" />
+  
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+
+  <api:set attr="JSONPath" value="$.data" />
+
+  <!-- The GET method corresponds to SELECT. Here you can override the default processing of the SELECT statement. The results of processing are pushed to the schema's output. See SELECT Execution for more information. -->
+  <api:script method="GET">
+    <api:call op="jsonproviderGet">
+      <api:push/>
+    </api:call>
+  </api:script>
+
+</api:script>
