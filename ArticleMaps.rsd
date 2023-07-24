@@ -41,7 +41,7 @@
   <api:set attr="PageSize"                             value="100" />
   <api:set attr="EnablePaging" value="TRUE" />
   
-  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MarchantId]/[Resource]" />
+  <api:set attr="URI" value="https://app2.logiless.com/api/v1/merchant/[_connection.MerchantID]/[Resource]" />
 
   <api:set attr="JSONPath" value="$.data" />
 
